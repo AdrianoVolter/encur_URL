@@ -1,0 +1,16 @@
+{
+  "name": "encur_url",
+  "version": "1.0.0",
+  "description": "encurtador de URL",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch ./src/server.ts"
+  },
+  "author": "Adriano Volter",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.11.29",
+    "tsx": "^4.7.1",
+    "typescript": "^5.4.2"
+  }
+}
