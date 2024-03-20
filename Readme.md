@@ -1,33 +1,33 @@
-# Encurta URL API
+# Shorten URL API
 
-A Encurta URL API é uma API simples construída com Fastify, PostgreSQL e Redis para encurtar URLs longas e rastrear métricas de acesso.
+Shorten URL API is a simple API built with Fastify, PostgreSQL and Redis to shorten long URLs and track access metrics.
 
-## Como usar
+## How to use
 
-### Instalação
+### Installation
 
-1. Certifique-se de ter o Node.js e o npm instalados em sua máquina.
-2. Clone este repositório:
+1. Make sure you have Node.js and npm installed on your machine.
+2. Clone this repository:
 
 ```bash
 git https://github.com/AdrianoVolter/encur_URL.git
 
 ```
-### Navegue até o diretório do projeto:
+### Navigate to the project directory:
 
 ```bash
 cd encur_URL
 ```
 
-### Instale as dependências:
+### Install dependencies:
 
 ```bash
 npm install
 ```
 
-### Configure o PostgreSQL e o Redis editando os arquivos src/lib/postgres.ts e src/lib/redis.ts, respectivamente.
+### Configure PostgreSQL and Redis by editing the src/lib/postgres.ts and src/lib/redis.ts files, respectively.
 
-### Inicie o servidor:
+### Start the server
 
 ```bash
 npm run dev
@@ -35,12 +35,12 @@ npm run dev
 
 ## Endpoints
 
-- GET /:code: Redireciona para a URL original correspondente ao código fornecido.
-- GET /api/links: Retorna todos os links encurtados.
-- POST /api/links: Encurta uma URL longa e retorna o código do link encurtado.
-- GET /api/metrics: Retorna as métricas de acesso para os links encurtados.
+- GET /:code: Redirects to the original URL corresponding to the provided code.
+- GET /api/links: Returns all shortened links.
+- POST /api/links: Shortens a long URL and returns the shortened link code.
+- GET /api/metrics: Returns access metrics for shortened links.
 
-## Tecnologias Utilizadas
-Fastify: Framework web rápido e eficiente para Node.js.
-PostgreSQL: Banco de dados relacional para armazenamento de links encurtados.
-Redis: Banco de dados em memória para armazenamento de métricas de acesso.
+## Technologies Used
+Fastify:Fast and efficient web framework for Node.js.
+PostgreSQL: Relational database for storing shortened links.
+Redis: In-memory database for storing access metrics.
