@@ -12,4 +12,9 @@ GET http://localhost:3000/api/links
 
 ###
 
-GET http://localhost:3000/Teste
+GET http://localhost:3000/Teste2
+
+
+###
+
+GET http://localhost:3000/api/metrics

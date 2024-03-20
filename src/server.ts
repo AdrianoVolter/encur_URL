@@ -2,7 +2,7 @@ import Fastify from "fastify";
 import { z } from "zod";
 import { sql } from "./lib/postgres";
 import postgres from "postgres";
-import { redis }  from "./lib/redis";
+import { redis } from "./lib/redis";
 const app = Fastify();
 
 app.get("/:code", async (request, reply) => {
@@ -64,6 +64,19 @@ app.post("/api/links", async (request, reply) => {
   }
 });
 
+app.get("/api/metrics", async (request, reply) => {
+  const result = await redis.zRangeByScoreWithScores("hits", 0, 50);
+
+  const metrics = result
+    .sort((a, b) => b.score - a.score)
+    .map((item) => {
+      return {
+        shortLinkID: item.value,
+        hits: item.score,
+      };
+    });
+  return metrics;
+});
 app
   .listen({
     port: 3000,
