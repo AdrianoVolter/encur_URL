@@ -6,14 +6,9 @@ Content-Type: application/json
     "url": "http://www.google.com"
 }
 
-
-
-
 ###
 
-
 GET http://localhost:3000/api/links
-
 
 ###
 
