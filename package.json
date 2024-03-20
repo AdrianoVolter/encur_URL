@@ -4,7 +4,8 @@
   "description": "encurtador de URL",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx watch ./src/server.ts"
+    "dev": "tsx watch ./src/server.ts",
+    "setup": "tsx ./src/setup.ts"
   },
   "author": "Adriano Volter",
   "license": "ISC",
@@ -16,6 +17,7 @@
   "dependencies": {
     "fastify": "^4.26.2",
     "postgres": "^3.4.3",
-    "redis": "^4.6.13"
+    "redis": "^4.6.13",
+    "zod": "^3.22.4"
   }
 }
