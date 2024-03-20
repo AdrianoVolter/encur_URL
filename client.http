@@ -2,7 +2,7 @@ POST http://localhost:3000/api/links
 Content-Type: application/json
 
 {
-    "code": "Teste2",
+    "code": "Teste4",
     "url": "http://www.google.com"
 }
 
@@ -12,7 +12,7 @@ GET http://localhost:3000/api/links
 
 ###
 
-GET http://localhost:3000/Teste2
+GET http://localhost:3000/Teste3
 
 
 ###
